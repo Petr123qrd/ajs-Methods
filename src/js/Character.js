@@ -1,13 +1,29 @@
 export default class Character {
   constructor(name) {
-    if (name === undefined || name.length < 2 || name.length > 10) {
-      throw new Error(
-        "Имя должно быть сткрой от 2 до 10 символов включительно"
-      );
-    }
     this.name = name;
-    this.level = 1;
+    this.type = type;
     this.health = 100;
+    this.level = 1;
+    const typeCharacter = [
+      "Bowman",
+      "Daemon",
+      "Magician",
+      "Swordsman",
+      "Undead",
+      "Zombie",
+    ];
+
+    if (typeof name !== "string") {
+      throw new Error("Ошибка! Имя должно быть строкой!");
+    }
+
+    if (name.length < 2 || name.length > 10) {
+      throw new Error("Ошибка! Количество символов в имени от 2 до 10!");
+    }
+
+    if (!typeCharacter.includes(type)) {
+      throw new Error("Ошибка! Такой персонаж не существует!");
+    }
   }
 
   levelUp() {
