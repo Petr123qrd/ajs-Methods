@@ -1,14 +1,13 @@
 import Undead from "../Undead";
 
-test("Получим объект Undead", () => {
-  const description = new Undead("undead");
-  const result = {
-    name: "undead",
+test("creation Undead", () => {
+  const recieved = new Undead("Undead", "Undead");
+  expect(recieved).toEqual({
+    name: "Undead",
     type: "Undead",
     health: 100,
     level: 1,
     attack: 25,
-    defense: 25,
-  };
-  expect(description).toEqual(result);
+    deffence: 25,
+  });
 });

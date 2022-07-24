@@ -1,9 +1,7 @@
-import Character from "./Character";
+import Character from "./Basic";
 
-export default class Bowerman extends Character {
-  constructor(name, type = "Bowerman") {
-    super(name, type);
-    this.attack = 25;
-    this.defense = 25;
-  }
+export default function Bowerman(name, type) {
+  Character.call(this, name, type);
+  this.attack = 25;
+  this.deffence = 25;
 }

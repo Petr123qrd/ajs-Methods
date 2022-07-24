@@ -1,14 +1,13 @@
 import Zombie from "../Zombie";
 
-test("Получим объект Zombie", () => {
-  const description = new Zombie("zombie");
-  const result = {
-    name: "zombie",
+test("creation Zombie", () => {
+  const recieved = new Zombie("Zombie", "Zombie");
+  expect(recieved).toEqual({
+    name: "Zombie",
     type: "Zombie",
     health: 100,
     level: 1,
     attack: 40,
-    defense: 10,
-  };
-  expect(description).toEqual(result);
+    deffence: 10,
+  });
 });
