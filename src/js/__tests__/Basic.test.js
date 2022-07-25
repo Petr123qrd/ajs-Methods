@@ -3,6 +3,7 @@ import Character from "../Basic";
 test("Повышаем уровень персонажа", () => {
   expect(() => {
     const description = new Character("warrior");
+
     description.health = 50;
     description.attack = 10;
     description.defense = 10;
